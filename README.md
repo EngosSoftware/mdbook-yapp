@@ -63,7 +63,7 @@ $ mdbook build
 
 There should be a warning message displayed when no configuration file is found.
 
-```shell
+```text
 2023-11-11 12:01:02 [INFO] (mdbook::book): Book building has started
 [WARNING][Yapp] configuration file not found, in current directory expected a file with the name starting with prefix: yapp
 [WARNING][Yapp] configuration file not found, in current directory expected a file with the name starting with prefix: yapp
