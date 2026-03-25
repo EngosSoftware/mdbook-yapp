@@ -25,7 +25,7 @@
 [build-badge-macos]: https://github.com/EngosSoftware/kivi/actions/workflows/build-macos.yml/badge.svg
 [build-badge-macos-arm64]: https://github.com/EngosSoftware/kivi/actions/workflows/build-macos-arm64.yml/badge.svg
 [cov-url]: https://crates.io/crates/coverio
-[cov-badge-mdbook-yapp]: https://img.shields.io/badge/cov-23%25%20%E2%94%82%2033%25%20%E2%94%82%2021%25-f52020.svg
+[cov-badge-mdbook-yapp]: https://img.shields.io/badge/cov-24%25%20%E2%94%82%2033%25%20%E2%94%82%2021%25-f52020.svg
 [cc-badge]: https://img.shields.io/badge/Contributor%20Covenant-2.1-blue.svg
 [cc-url]: https://github.com/EngosSoftware/yapp/blob/main/CODE_OF_CONDUCT.md
 [made-by-human-badge]: https://img.shields.io/badge/Made_by-HUMAN-red.svg

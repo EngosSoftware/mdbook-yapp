@@ -19,23 +19,35 @@ tasks:
     cmds:
       - cmd: cargo +stable clippy --all-targets
 
+  cov-data:
+    desc: Generates code coverage data
+    cmds:
+      - cmd: cargo +stable llvm-cov clean
+      - cmd: cargo +stable llvm-cov --no-cfg-coverage --no-report
+
   cov:
     desc: Generates code coverage report in text format
     cmds:
-      - cmd: cargo +stable llvm-cov clean
-      - cmd: cargo +stable llvm-cov --no-cfg-coverage
+      - task: cov-data
+      - cmd: cargo +stable llvm-cov report
 
   cov-html:
     desc: Generates code coverage report in HTML format
     cmds:
-      - cmd: cargo +stable llvm-cov clean
-      - cmd: cargo +stable llvm-cov --no-cfg-coverage --html --open
+      - task: cov-data
+      - cmd: cargo +stable llvm-cov report --html
+
+  cov-html-open:
+    desc: Generates code coverage report in HTML format and opens in browser
+    cmds:
+      - task: cov-data
+      - cmd: cargo +stable llvm-cov report --html --open
 
   cov-badge:
     desc: Generates the detailed code coverage badge
     cmds:
-      - cmd: cargo +stable llvm-cov clean
-      - cmd: cargo +stable llvm-cov --no-cfg-coverage --json --summary-only | coverio --collapse --tag cov-badge-mdbook-yapp
+      - task: cov-data
+      - cmd: cargo +stable llvm-cov report --json --summary-only | coverio --collapse --tag cov-badge-mdbook-yapp
 
   doc:
     desc: Generates documentation
