@@ -1,23 +1,21 @@
-# Windows x86_64
-
 name: Windows
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
-      - release/**
+      - release/*
   pull_request:
-
-env:
-  CARGO_TERM_COLOR: always
 
 jobs:
   build:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: dtolnay/rust-toolchain@stable
         with:
           targets: x86_64-pc-windows-msvc
+      - run: cargo clippy --all-targets
+      - run: cargo test
       - run: cargo build --release --target=x86_64-pc-windows-msvc

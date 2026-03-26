@@ -5,10 +5,10 @@
 use crate::config::load_config_from_file;
 use crate::replacement::Replacements;
 use clap::{Arg, ArgMatches, Command};
+use mdbook::BookItem;
 use mdbook::book::Book;
 use mdbook::errors::Error;
 use mdbook::preprocess::{CmdPreprocessor, Preprocessor, PreprocessorContext};
-use mdbook::BookItem;
 use semver::{Version, VersionReq};
 use std::{io, process};
 
