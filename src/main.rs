@@ -5,10 +5,9 @@
 use crate::config::load_config_from_file;
 use crate::replacement::Replacements;
 use clap::{Arg, ArgMatches, Command};
-use mdbook::BookItem;
-use mdbook::book::Book;
-use mdbook::errors::Error;
-use mdbook::preprocess::{CmdPreprocessor, Preprocessor, PreprocessorContext};
+use mdbook_preprocessor::book::{Book, BookItem};
+use mdbook_preprocessor::errors::{Error, Result};
+use mdbook_preprocessor::{Preprocessor, PreprocessorContext};
 use semver::{Version, VersionReq};
 use std::{io, process};
 
@@ -51,8 +50,8 @@ impl Preprocessor for Yapp {
   }
 
   /// Checks for supported renderers.
-  fn supports_renderer(&self, renderer: &str) -> bool {
-    renderer != "not-supported"
+  fn supports_renderer(&self, renderer: &str) -> Result<bool> {
+    Ok(renderer != "not-supported")
   }
 }
 
@@ -67,14 +66,14 @@ fn make_app() -> Command {
 
 /// Handles preprocessing command.
 fn handle_preprocessing(pre: &dyn Preprocessor) -> Result<(), Error> {
-  let (ctx, book) = CmdPreprocessor::parse_input(io::stdin())?;
+  let (ctx, book) = mdbook_preprocessor::parse_input(io::stdin())?;
   let book_version = Version::parse(&ctx.mdbook_version)?;
-  let version_req = VersionReq::parse(mdbook::MDBOOK_VERSION)?;
+  let version_req = VersionReq::parse(mdbook_preprocessor::MDBOOK_VERSION)?;
   if !version_req.matches(&book_version) {
     eprintln!(
       "Warning: The {} plugin was built against version {} of mdbook, but is being called from version {}",
       pre.name(),
-      mdbook::MDBOOK_VERSION,
+      mdbook_preprocessor::MDBOOK_VERSION,
       ctx.mdbook_version
     );
   }
@@ -86,7 +85,7 @@ fn handle_preprocessing(pre: &dyn Preprocessor) -> Result<(), Error> {
 /// Handles `supports` command.
 fn handle_supports(pre: &dyn Preprocessor, sub_args: &ArgMatches) -> ! {
   let renderer = sub_args.get_one::<String>("renderer").expect("Required argument");
-  let supported = pre.supports_renderer(renderer);
+  let supported = pre.supports_renderer(renderer).unwrap();
   if supported {
     process::exit(0);
   } else {
