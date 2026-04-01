@@ -11,7 +11,7 @@ Phrases to be replaced with specified content are defined in plain-text configur
 Install using Cargo:
 
 ```shell
-$ cargo install mdbook-yapp
+cargo install mdbook-yapp
 ```
 
 Configure this preprocessor by adding to your `book.toml` the following line:
@@ -23,7 +23,7 @@ Configure this preprocessor by adding to your `book.toml` the following line:
 Build you book as usual:
 
 ```shell
-$ mdbook build
+mdbook build
 ```
 
 There should be a warning message displayed when no configuration file is found.
@@ -119,4 +119,14 @@ or double quotation mark:
 " b c "
 ```
 
-so the result of replacement for input `│ a │` will be `│ b c │`.
+in this case, the result of replacement for input:
+
+```text
+│ a │
+```
+
+will be:
+
+```text
+│ b c │
+```
