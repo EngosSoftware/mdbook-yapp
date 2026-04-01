@@ -11,6 +11,7 @@ Supported [mdBook] versions:
 | mdBook | mdbook-yapp | 
 |:-------|:-----------:|
 | 0.4.x  |    1.x.x    |    
+| 0.5.x  |    2.x.x    |    
 
 ## Installation
 
