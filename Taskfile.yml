@@ -47,7 +47,7 @@ tasks:
     desc: Generates the detailed code coverage badge
     cmds:
       - task: cov-data
-      - cmd: cargo +stable llvm-cov report --json --summary-only | coverio --collapse --tag cov-badge-mdbook-yapp
+      - cmd: cargo +stable llvm-cov report --json --summary-only | coverio -l coverage -c --tag cov-badge
 
   doc:
     desc: Generates documentation
@@ -78,6 +78,12 @@ tasks:
     desc: Installs preprocessor locally
     cmds:
       - cmd: cargo +stable install mdbook-yapp --path . --force
+
+  readme:
+    desc: Regenerates README.md file
+    cmds:
+      - cmd: magg readme docs/README.md
+      - task: cov-badge
 
   release:
     desc: Builds in release mode
