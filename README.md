@@ -39,9 +39,15 @@
 
 ## Overview
 
-[mdBook](https://github.com/rust-lang/mdBook) preprocessor that simply replaces text in all chapters.
+[mdBook] preprocessor that simply replaces text in all chapters.
 
 Phrases to be replaced with specified content are defined in plain-text configuration file.
+
+Supported [mdBook] versions:
+
+| mdBook | mdbook-yapp | 
+|:-------|:-----------:|
+| 0.4.x  |    1.x.x    |    
 
 ## Installation
 
@@ -167,6 +173,8 @@ will be:
 ```text
 │ b c │
 ```
+
+[mdBook]: https://github.com/rust-lang/mdBook
 
 ## License
 
