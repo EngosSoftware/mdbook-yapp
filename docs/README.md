@@ -1,4 +1,4 @@
-# mdBook preprocessor for simple text replacements
+# mdBook preprocessor for simple text replacement patterns
 
 ## Overview
 

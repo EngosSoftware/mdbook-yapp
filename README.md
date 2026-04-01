@@ -35,7 +35,7 @@
 [es-url]: https://engos.de
 [repository-url]: https://github.com/EngosSoftware/mdbook-yapp
 
-# mdBook preprocessor for simple text replacements
+# mdBook preprocessor for simple text replacement patterns
 
 ## Overview
 
