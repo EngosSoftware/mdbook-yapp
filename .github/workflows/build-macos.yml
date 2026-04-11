@@ -40,5 +40,5 @@ jobs:
       - name: Upload binary
         uses: actions/upload-artifact@v7
         with:
-          name: ${{ steps.crate_metadata.outputs.name }}-${{ steps.crate_metadata.outputs.version }}-x86_64-apple-darwin
+          name: ${{ steps.crate_metadata.outputs.name }}-v${{ steps.crate_metadata.outputs.version }}-x86_64-apple-darwin
           path: target/x86_64-apple-darwin/release/${{ steps.crate_metadata.outputs.name }}
