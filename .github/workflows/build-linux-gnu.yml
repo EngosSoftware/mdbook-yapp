@@ -43,4 +43,5 @@ jobs:
       - name: Upload binary
         uses: actions/upload-artifact@v7
         with:
+          name: ${{ steps.crate_metadata.outputs.name }}-${{ steps.crate_metadata.outputs.version }}-x86_64-unknown-linux-gnu.tar.gz
           path: ${{ steps.crate_metadata.outputs.name }}-${{ steps.crate_metadata.outputs.version }}-x86_64-unknown-linux-gnu.tar.gz
