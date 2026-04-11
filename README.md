@@ -3,6 +3,7 @@
 [![crates.io][crates-badge]][crates-url]
 [![coverage][cov-badge]][cov-url]  
 ![build Linux][build-badge-linux]
+![build Musl][build-badge-musl]
 ![build Windows][build-badge-windows]
 ![build macOs][build-badge-macos]
 ![build macOs arm64][build-badge-macos-arm64]  
@@ -16,7 +17,8 @@
 [crates-url]: https://crates.io/crates/mdbook-yapp
 [cov-badge]: https://img.shields.io/badge/coverage-24%25%20%E2%94%82%2033%25%20%E2%94%82%2021%25-f52020.svg
 [cov-url]: https://crates.io/crates/coverio
-[build-badge-linux]: https://github.com/EngosSoftware/mdbook-yapp/actions/workflows/build-linux.yml/badge.svg
+[build-badge-linux]: https://github.com/EngosSoftware/mdbook-yapp/actions/workflows/build-linux-gnu.yml/badge.svg
+[build-badge-musl]: https://github.com/EngosSoftware/mdbook-yapp/actions/workflows/build-linux-musl.yml/badge.svg
 [build-badge-windows]: https://github.com/EngosSoftware/mdbook-yapp/actions/workflows/build-windows.yml/badge.svg
 [build-badge-macos]: https://github.com/EngosSoftware/mdbook-yapp/actions/workflows/build-macos.yml/badge.svg
 [build-badge-macos-arm64]: https://github.com/EngosSoftware/mdbook-yapp/actions/workflows/build-macos-arm64.yml/badge.svg
