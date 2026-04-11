@@ -12,10 +12,33 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: dtolnay/rust-toolchain@stable
+      - name: Checkout sources
+        uses: actions/checkout@v6
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
         with:
           targets: aarch64-apple-darwin
-      - run: cargo clippy --all-targets
-      - run: cargo test
-      - run: cargo build --release --target=aarch64-apple-darwin
+
+      - name: Get package name and version
+        id: crate_metadata
+        run: |
+          NAME=$(cargo metadata --no-deps --format-version=1 | jq -r '.packages[0].name')
+          echo "name=$NAME" >> $GITHUB_OUTPUT
+          VERSION=$(cargo metadata --no-deps --format-version=1 | jq -r '.packages[0].version')
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Run clippy
+        run: cargo clippy --target=aarch64-apple-darwin -- -D warnings
+
+      - name: Run tests
+        run: cargo test --target=aarch64-apple-darwin
+
+      - name: Build release binary
+        run: cargo build --release --target=aarch64-apple-darwin
+
+      - name: Upload binary
+        uses: actions/upload-artifact@v7
+        with:
+          name: ${{ steps.crate_metadata.outputs.name }}-${{ steps.crate_metadata.outputs.version }}-aarch64-apple-darwin
+          path: target/aarch64-apple-darwin/release/${{ steps.crate_metadata.outputs.name }}

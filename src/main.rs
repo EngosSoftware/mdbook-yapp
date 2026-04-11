@@ -57,7 +57,7 @@ impl Preprocessor for Yapp {
 
 /// Returns application commands.
 fn make_app() -> Command {
-  Command::new("yapp-preprocessor").about("A mdbook preprocessor for simple replacement patterns").subcommand(
+  Command::new("yapp-preprocessor").about("mdBook preprocessor for simple text replacements").subcommand(
     Command::new("supports")
       .arg(Arg::new("renderer").required(true))
       .about("Check whether a renderer is supported by this preprocessor"),
