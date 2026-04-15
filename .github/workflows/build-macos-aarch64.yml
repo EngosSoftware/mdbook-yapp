@@ -1,4 +1,4 @@
-name: macOS aarch64
+name: build macOS aarch64
 
 on:
   workflow_dispatch:

@@ -1,4 +1,4 @@
-name: GNU/Linux
+name: build GNU/Linux
 
 on:
   workflow_dispatch:
