@@ -20,7 +20,7 @@ jobs:
         with:
           targets: x86_64-pc-windows-msvc
 
-      - name: Get package name and version
+      - name: Get package name and version of the crate
         id: crate_metadata
         shell: bash
         run: |

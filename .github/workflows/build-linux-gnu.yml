@@ -1,4 +1,4 @@
-name: Linux
+name: GNU/Linux
 
 on:
   workflow_dispatch:
@@ -20,7 +20,7 @@ jobs:
         with:
           targets: x86_64-unknown-linux-gnu
 
-      - name: Get package name and version
+      - name: Get package name and version of the crate
         id: crate_metadata
         run: |
           NAME=$(cargo metadata --no-deps --format-version=1| jq -r '.packages[0].name')
