@@ -9,13 +9,6 @@ keywords = ["mdBook", "preprocessor", "replace", "text", "pattern"]
 categories = ["template-engine", "text-processing"]
 license = "MIT OR Apache-2.0"
 edition = "2024"
-exclude = [
-    "rustfmt.toml",
-    "Taskfile.yml",
-    ".github/",
-    ".gitignore",
-    "CODE_OF_CONDUCT.md"
-]
 
 [dependencies]
 clap = "4.6.0"
