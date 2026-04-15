@@ -1,15 +1,15 @@
 ### mdbook-yapp
 
 [![crates.io][crates-badge]][crates-url]
-[![coverage][cov-badge]][cov-url]  
+[![coverage][cov-badge]][cov-url]
 ![build-linux-gnu][build-badge-linux-gnu]
 ![build-linux-musl][build-badge-linux-musl]
-![build Windows][build-badge-windows]
-![build macOs][build-badge-macos]
-![build macOs arm64][build-badge-macos-arm64]  
+![build-macos][build-badge-macos]
+![build-macos-aarch64][build-badge-macos-aarch64]
+![build-windows][build-badge-windows]
 [![mit-license][mit-badge]][mit-license-url]
 [![apache-license][apache-badge]][apache-license-url]
-[![cc][cc-badge]][cc-url]  
+[![cc][cc-badge]][cc-url]
 [![mbh][mbh-badge]][mbh-url]
 [![es][es-badge]][es-url]
 
@@ -19,9 +19,9 @@
 [cov-url]: https://crates.io/crates/coverio
 [build-badge-linux-gnu]: https://github.com/EngosSoftware/mdbook-yapp/actions/workflows/build-linux-gnu.yml/badge.svg
 [build-badge-linux-musl]: https://github.com/EngosSoftware/mdbook-yapp/actions/workflows/build-linux-musl.yml/badge.svg
-[build-badge-windows]: https://github.com/EngosSoftware/mdbook-yapp/actions/workflows/build-windows.yml/badge.svg
 [build-badge-macos]: https://github.com/EngosSoftware/mdbook-yapp/actions/workflows/build-macos.yml/badge.svg
-[build-badge-macos-arm64]: https://github.com/EngosSoftware/mdbook-yapp/actions/workflows/build-macos-aarch64.yml/badge.svg
+[build-badge-macos-aarch64]: https://github.com/EngosSoftware/mdbook-yapp/actions/workflows/build-macos-aarch64.yml/badge.svg
+[build-badge-windows]: https://github.com/EngosSoftware/mdbook-yapp/actions/workflows/build-windows.yml/badge.svg
 [mit-badge]: https://img.shields.io/badge/License-MIT-4169E1.svg
 [mit-url]: https://opensource.org/licenses/MIT
 [mit-license-url]: https://github.com/EngosSoftware/mdbook-yapp/blob/main/LICENSE-MIT
@@ -31,7 +31,7 @@
 [apache-notice-url]: https://github.com/EngosSoftware/mdbook-yapp/blob/main/NOTICE
 [cc-badge]: https://img.shields.io/badge/Contributor%20Covenant-2.1-4169E1.svg
 [cc-url]: https://github.com/EngosSoftware/mdbook-yapp/blob/main/CODE_OF_CONDUCT.md
-[mbh-badge]: https://img.shields.io/badge/Made_by_a-HUMAN-DC143C.svg
+[mbh-badge]: https://img.shields.io/badge/Made_by-HUMAN-DC143C.svg
 [mbh-url]: https://github.com/DariuszDepta
 [es-badge]: https://img.shields.io/badge/at-Engos_Software-32CD32.svg
 [es-url]: https://engos.de
