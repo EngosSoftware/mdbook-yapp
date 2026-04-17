@@ -22,18 +22,18 @@
 [build-badge-macos]: https://github.com/EngosSoftware/mdbook-yapp/actions/workflows/build-macos.yml/badge.svg
 [build-badge-macos-aarch64]: https://github.com/EngosSoftware/mdbook-yapp/actions/workflows/build-macos-aarch64.yml/badge.svg
 [build-badge-windows]: https://github.com/EngosSoftware/mdbook-yapp/actions/workflows/build-windows.yml/badge.svg
-[mit-badge]: https://img.shields.io/badge/License-MIT-4169E1.svg
+[mit-badge]: https://img.shields.io/badge/License-MIT-9370DB.svg
 [mit-url]: https://opensource.org/licenses/MIT
 [mit-license-url]: https://github.com/EngosSoftware/mdbook-yapp/blob/main/LICENSE-MIT
-[apache-badge]: https://img.shields.io/badge/License-Apache%202.0-4169E1.svg
+[apache-badge]: https://img.shields.io/badge/License-Apache%202.0-9370DB.svg
 [apache-url]: https://www.apache.org/licenses/LICENSE-2.0
 [apache-license-url]: https://github.com/EngosSoftware/mdbook-yapp/blob/main/LICENSE
 [apache-notice-url]: https://github.com/EngosSoftware/mdbook-yapp/blob/main/NOTICE
-[cc-badge]: https://img.shields.io/badge/Contributor%20Covenant-2.1-4169E1.svg
+[cc-badge]: https://img.shields.io/badge/Contributor%20Covenant-2.1-9370DB.svg
 [cc-url]: https://github.com/EngosSoftware/mdbook-yapp/blob/main/CODE_OF_CONDUCT.md
-[mbh-badge]: https://img.shields.io/badge/Made_by-HUMAN-DC143C.svg
+[mbh-badge]: https://img.shields.io/badge/Made_by-HUMAN-F5DEB3.svg
 [mbh-url]: https://github.com/DariuszDepta
-[es-badge]: https://img.shields.io/badge/at-Engos_Software-32CD32.svg
+[es-badge]: https://img.shields.io/badge/at-Engos_Software-ADD8E6.svg
 [es-url]: https://engos.de
 [repository-url]: https://github.com/EngosSoftware/mdbook-yapp
 
