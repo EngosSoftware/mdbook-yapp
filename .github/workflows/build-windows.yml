@@ -27,7 +27,7 @@ jobs:
           NAME=$(cargo metadata --no-deps --format-version=1 | jq -r '.packages[0].name')
           echo "name=$NAME" >> $GITHUB_OUTPUT
           VERSION=$(cargo metadata --no-deps --format-version=1 | jq -r '.packages[0].version')
-          echo "version=$VERSION" >> $GITHUB_OUTPUT          
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
 
       - name: Build release binary
         run: cargo build --release --target=x86_64-pc-windows-msvc
